@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table{
+            width: 100%;
+        }
+        td{
+            border: 1px solid #000;
+        }
+    </style>
+</head>
+<body>
+    
+    <table>
+        <caption>Lista di utenti iscritti</caption>
+       <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Cognome</th>
+                <th>Anni</th>
+            </tr>
+       </thead>
+       <tbody>
+            <tr>
+                <td>Mario</td>
+                <td>Rossi</td>
+                <td>30</td>
+            </tr>
+
+            <tr>
+                <td>Giovanna</td>
+                <td>Bianchi</td>
+                <td>22</td>
+            </tr>
+       </tbody>
+       <tfoot>
+            <tr>
+                <td colspan="2">Numero iscritti:</td>
+                <td>2</td>
+            </tr>
+       </tfoot>
+    </table>
+
+    <h1>Esempi colspan e rowspan</h1>
+
+    <!-- 
+    Nonostante io vi abbia detto che non si utilizza HTML per scopi grafici o per lavorare sulla grafica tra le poche eccezioni ci sono colspan e rowspan, necessari per chiudere buchi delle tabelle
+    -->
+
+    <!-- Esempio di tabella in cui chiudiamo i buchi utilizzando rowspan e colspan -->
+    <table>
+        <tr>
+            <td>1</td>
+            <td rowspan="2">
+                <!-- Si muove verticalmente per occupare sia lo slot 2 che lo slot 5.  -->
+                2 - 5
+            </td>
+            <td>3</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>6</td>
+        </tr>
+        <tr>
+            <td>7</td>
+            <td colspan="2">
+                <!-- Si muove orizzontalmente per occupare lo slot 8 e anche lo slot 9.  -->
+                8 - 9
+            </td>
+        </tr>
+    </table>
+
+    <!-- 
+    Esempio di tabella con buchi 
+    <table>
+        <tr>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            Manca la cella numero 5 e questo provocherà un buco  
+            <td>6</td>
+        </tr>
+        <tr>
+            <td>7</td>
+            <td>8</td>
+            Manca la cella numero 9 e questo provocherà un buco  
+        </tr>
+    </table> -->
+
+
+</body>
+</html>
