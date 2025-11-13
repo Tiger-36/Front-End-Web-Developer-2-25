@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <!-- I <br> che uso in questa pagina servono solo per presentare l'anteprima agevolmente durante la lezione. Non è una buona pratica adoperarli per gestire il layout e vanno evitati in un progetto reale. Per mandare a capo gli input di un <form> dovrai usare CSS (imparerai a farlo)  -->
+
+    <form>
+
+        <!-- placeholder: Nota interna al campo che spiega all'utente che cosa fare -->
+        <input type="text" placeholder="Nome"><br>
+
+        <!-- Label: Etichetta che spiega all'utente a cosa serve uno specifico campo 
+        attributi:
+        for="" -> Attributo che richiede come valore l'id di un campo a cui collegarsi
+        id="" -> Attributo che dà un identificativo ad un campo, in pratica è come se il campo avesse un nome.  
+        -->
+        <label for="cognome">Cognome</label>
+        <input type="text" id="cognome"><br>
+
+        <input type="email" placeholder="Email">
+        <input type="password" placeholder="Password">
+
+        <select>
+            <option value="1">Roma</option>
+            <option value="5">Milano</option>
+            <option value="8">Napoli</option>
+        </select>
+        
+        <!-- 
+            Al posto di button molti sviluppatori usano <input type="submit">
+            E una scelta, puoi usare quello che preferisci 
+            Tieni presente che input, essendo autoconclusivo non ha uno spazio per il testo dell'etichetta del bottone. 
+            Per cambiare l'etichetta del bottone dovrai usare l'attributo value. 
+            <input type="submit" value="Salva">
+            -->
+
+        <textarea cols="20" rows="3"></textarea>
+
+        <button>Invia</button>
+    </form>
+
+
+</body>
+
+</html>
