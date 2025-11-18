@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <form action="risultato.html" method="get">
+
+        <input type="text" placeholder="Nome" name="nome" required readonly><br>
+
+        <label for="cognome">Cognome</label>
+        <input type="text" id="cognome" name="cognome"><br>
+
+        <input type="email" placeholder="Email" name="email" required>
+        <input type="password" placeholder="Password" name="psw">
+        <hr>
+        
+        <label for="m">Maschio</label>
+        <input type="radio" id="m" value="maschio" name="genere" checked>
+        <label for="f">Femmina</label>
+        <input type="radio" id="f" value="femmina" name="genere">
+        
+        <hr>
+
+        <select name="city">
+            <option value="1">Roma</option>
+            <option value="5">Milano</option>
+            <option value="9">Napoli</option>
+        </select>
+
+        <hr>
+
+        <label for="mozzarella">Mozzarella</label>
+        <input type="checkbox" id="mozzarella" checked value="mozzarella">
+        <label for="basilico">Basilico</label>
+        <input type="checkbox" id="basilico" value="basilico">
+        <label for="pomodoro">Pomodoro</label>
+        <input type="checkbox" id="pomodoro" value="pomodoro">
+
+        <hr>
+        <textarea cols="20" rows="3" name="messaggio"></textarea>
+
+        <button disabled>Invia</button>
+    </form>
+
+</body>
+
+</html>
