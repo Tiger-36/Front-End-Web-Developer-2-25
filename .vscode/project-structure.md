@@ -40,6 +40,29 @@ This file maintains an up-to-date list of project files and structure.
     - 📁 `m1\L4\.vscode/`
       - 📄 `m1\L4\.vscode\project-structure.md` (Markdown)
     - 📄 `m1\L4\tabelle.html` (HTML)
+  - 📁 `m1\L6/`
+    - 📁 `m1\L6\.vscode/`
+      - 📄 `m1\L6\.vscode\project-structure.md` (Markdown)
+    - 📄 `m1\L6\form.html` (HTML)
+  - 📁 `m1\L7/`
+    - 📁 `m1\L7\.vscode/`
+      - 📄 `m1\L7\.vscode\project-structure.md` (Markdown)
+    - 📄 `m1\L7\form.html` (HTML)
+    - 📄 `m1\L7\risultato.html` (HTML)
+  - 📁 `m1\L8/`
+    - 📁 `m1\L8\.vscode/`
+      - 📄 `m1\L8\.vscode\project-structure.md` (Markdown)
+    - 📁 `m1\L8\soluzione/`
+      - 📁 `m1\L8\soluzione\.vscode/`
+        - 📄 `m1\L8\soluzione\.vscode\project-structure.md` (Markdown)
+      - 📄 `m1\L8\soluzione\index.html` (HTML)
+      - 📄 `m1\L8\soluzione\mockup.JPG` (Unknown)
+    - 📄 `m1\L8\index.html` (HTML)
+  - 📁 `m1\L9/`
+    - 📁 `m1\L9\.vscode/`
+      - 📄 `m1\L9\.vscode\project-structure.md` (Markdown)
+    - 📁 `m1\L9\basi-css/`
+    - 📄 `m1\L9\iframe.html` (HTML)
 
 ---
-Last updated: 2025-11-06T19:57:24.761Z
+Last updated: 2025-11-25T19:35:24.488Z
