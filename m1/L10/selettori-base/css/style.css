@@ -1,0 +1,12 @@
+/* questo è un commento */
+#colore-verde{/*peso: 100*/
+    color: green !important;
+}
+
+.colore-rosso{/*peso: 10*/
+    color: red !important;
+}
+
+.sfondo-blu{
+    background-color: blue;
+}
