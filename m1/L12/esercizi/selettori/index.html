@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <title>Esercizi sui selettori CSS</title>
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+  <h1>Esercizi sui selettori CSS</h1>
+  <p class="intro">
+    Usa il file <strong>style.css</strong> per scrivere i selettori richiesti negli esercizi.
+  </p>
+
+  <!-- ESERCIZIO 1: selettore di tag (p) -->
+  <section id="ex1">
+    <h2>1. Selettore di tag</h2>
+    <p>Paragrafo 1</p>
+    <p>Paragrafo 2</p>
+    <p>Paragrafo 3</p>
+  </section>
+
+  <!-- ESERCIZIO 2: selettore di classe (.box) -->
+  <section id="ex2">
+    <h2>2. Selettore di classe</h2>
+    <div class="box">Box con classe "box" 1</div>
+    <div>Box senza classe</div>
+    <div class="box">Box con classe "box" 2</div>
+    <div>Altro box senza classe</div>
+    <div class="box">Box con classe "box" 3</div>
+  </section>
+
+  <!-- ESERCIZIO 3: selettore di ID (#title) -->
+  <section id="ex3">
+    <h2>3. Selettore di ID</h2>
+    <h1 id="main-title">Titolo principale</h1>
+    <h1>Altro titolo senza ID</h1>
+  </section>
+
+  <!-- ESERCIZIO 4: discendente (ul li) -->
+  <section id="ex4">
+    <h2>4. Selettore discendente</h2>
+    <ul class="lista-principale">
+      <li>Voce 1</li>
+      <li>Voce 2
+        <ul><!-- sottolista -->
+          <li>Voce 2.1</li>
+          <li>Voce 2.2</li>
+        </ul>
+      </li>
+      <li>Voce 3</li>
+    </ul>
+  </section>
+
+  <!-- ESERCIZIO 5: figlio diretto (div > span) -->
+  <section id="ex5">
+    <h2>5. Figlio diretto</h2>
+    <div class="contenitore-1">
+      <span>Span figlio diretto di div</span>
+    </div>
+    <div class="contenitore-2">
+      <p>
+        <span>Span NON figlio diretto (è dentro p)</span>
+      </p>
+    </div>
+  </section>
+
+  <!-- ESERCIZI 6 e 7: fratelli adiacenti e generici (p + ul, p ~ ul) -->
+  <section id="ex6-7">
+    <h2>6–7. Fratelli adiacenti e generici</h2>
+    <p>Paragrafo di riferimento</p>
+    <ul class="lista-1">
+      <li>Lista 1 (subito dopo il paragrafo)</li>
+    </ul>
+    <ul class="lista-2">
+      <li>Lista 2 (seconda lista dopo il paragrafo)</li>
+    </ul>
+    <p>Altro paragrafo</p>
+    <ul class="lista-3">
+      <li>Lista 3 (dopo secondo paragrafo)</li>
+    </ul>
+  </section>
+
+  <!-- ESERCIZIO 8: :hover -->
+  <section id="ex8">
+    <h2>8. :hover</h2>
+    <button class="btn-hover">Passa sopra il mouse</button>
+  </section>
+
+  <!-- ESERCIZIO 9: :focus -->
+  <section id="ex9">
+    <h2>9. :focus</h2>
+    <label for="focus-input">Clicca dentro il campo:</label>
+    <input id="focus-input" type="text" placeholder="Scrivi qualcosa">
+  </section>
+
+  <!-- ESERCIZIO 10: :first-child / :last-child -->
+  <section id="ex10">
+    <h2>10. :first-child e :last-child</h2>
+    <ul class="lista-first-last">
+      <li>Elemento 1</li>
+      <li>Elemento 2</li>
+      <li>Elemento 3</li>
+      <li>Elemento 4</li>
+      <li>Elemento 5</li>
+    </ul>
+  </section>
+
+  <!-- ESERCIZIO 11: input[type="text"] -->
+  <section id="ex11">
+    <h2>11. Selettore di attributo</h2>
+    <input type="text" placeholder="Input di testo">
+    <input type="password" placeholder="Password">
+    <input type="email" placeholder="Email">
+  </section>
+
+  <!-- ESERCIZIO 12: :not() -->
+  <section id="ex12">
+    <h2>12. :not()</h2>
+    <div class="card">Card 1</div>
+    <div class="card highlight">Card 2 (highlight)</div>
+    <div class="card">Card 3</div>
+    <div class="card">Card 4</div>
+  </section>
+
+  <!-- ESERCIZIO 13: ::before e ::after -->
+  <section id="ex13">
+    <h2>13. ::before e ::after</h2>
+    <h3 class="label-title">Titolo con etichetta</h3>
+    <p>Questo paragrafo serve solo come riferimento visivo.</p>
+  </section>
+
+  <!-- ESERCIZIO 14: :target -->
+  <section id="ex14">
+    <h2>14. :target</h2>
+    <p>
+      <a href="#target-section">Vai alla sezione target</a>
+    </p>
+    <p>
+      <a href="#ex14">Torna in alto a questa sezione</a>
+    </p>
+    <div id="target-section" class="target-box">
+      Sono la sezione target dell'ancora interna.
+    </div>
+  </section>
+
+  <!-- ESERCIZIO 15: specificità tag vs classe -->
+<section id="ex15">
+  <h2>15. Specificità: tag vs classe</h2>
+  <p class="testo-speciale">Questo testo serve per testare classe vs tag.</p>
+</section>
+
+<!-- ESERCIZIO 16: specificità ID vs classe vs tag -->
+<section id="ex16">
+  <h2>16. Specificità: ID vs classe vs tag</h2>
+  <div id="box-id" class="box colorato">
+    Box che ha sia ID che classi
+  </div>
+</section>
+
+<!-- ESERCIZIO 17: selettori combinati -->
+<section id="ex17">
+  <h2>17. Specificità: selettori combinati</h2>
+  <p class="nota evidenziata">Paragrafo con due classi</p>
+</section>
+
+<!-- ESERCIZIO 18: inline style -->
+<section id="ex18">
+  <h2>18. Specificità: inline style</h2>
+  <h3 id="titolo-inline" style="color: orange;">Titolo con stile inline</h3>
+</section>
+
+<!-- ESERCIZIO 19: !important -->
+<section id="ex19">
+  <h2>19. Specificità: !important</h2>
+  <p class="important-test">Testo che subirà l'effetto di !important</p>
+</section>
+
+</body>
+</html>

@@ -1,0 +1,117 @@
+/* Stili di base per rendere la pagina leggibile (non sono parte degli esercizi) */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  margin: 0;
+  padding: 20px;
+  line-height: 1.5;
+  background-color: #f4f4f4;
+}
+
+h1, h2 {
+  margin-bottom: 0.5rem;
+}
+
+section {
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  padding: 15px;
+  margin-bottom: 20px;
+  border-radius: 6px;
+}
+
+.intro {
+  margin-bottom: 20px;
+}
+
+/* ===========================
+   QUI INIZIANO GLI ESERCIZI
+   =========================== */
+
+/* 1. Selettore di tag (p)
+   - Obiettivo: applica uno stile a tutti i <p> della sezione*/
+
+
+/* 2. Selettore di classe (.box)
+   - Obiettivo: applica uno stile solo agli elementi con classe "box" */
+
+
+/* 3. Selettore di ID (#main-title)
+   - Obiettivo: stile solo per il titolo con id="main-title" */
+
+
+/* 4. Selettore discendente (ul li)
+   - Obiettivo: stile ai <li> figli della sottolista*/
+
+
+/* 5. Figlio diretto (div > span)
+   - Obiettivo: colora solo gli span figli diretti di un div */
+
+
+/* 6. Fratello adiacente (p + ul)
+   - Obiettivo: stile alla prima ul dopo un p */
+
+
+/* 7. Fratelli generici (p ~ ul)
+   - Obiettivo: stile a tutte le ul dopo un p (assegna uno stile diverso da quello dell'esercizio 6) */
+
+
+/* 8. :hover
+   - Obiettivo: cambia aspetto del bottone .btn-hover al passaggio del mouse */
+
+   
+
+/* 9. :focus
+   - Obiettivo: evidenzia l’input #focus-input quando è selezionato */
+
+
+/* 10. :first-child / :last-child
+   - Obiettivo: colora il primo e l’ultimo elemento di .lista-first-last */
+
+
+/* 11. Selettore di attributo input[type="text"]
+   - Obiettivo: stile solo per l’input di tipo text */
+
+
+/* 12. :not()
+   - Obiettivo: sfondo grigio per tutte le .card tranne quella con .highlight */
+   
+
+/* 13. ::before e ::after
+   - Obiettivo: aggiungi contenuto prima/dopo .label-title */
+
+
+/* 14. :target
+   - Obiettivo: evidenzia #target-section quando è il target del link */
+
+
+/* ===========================
+   ESERCIZI SPECIFICITÀ
+   =========================== */
+
+/* 15. Tag vs classe
+   - Dare un colore al tag p e un altro colore a .testo-speciale
+*/
+
+
+/* 16. ID vs classe vs tag
+   - Dare colori diversi a: div, .colorato, #box-id
+*/
+
+
+/* 17. Selettori combinati
+   - Dare colori diversi a .nota, .nota.evidenziata
+*/
+
+/* 18. Inline style
+   - Dare colori diversi a h3 e #titolo-inline
+   - Osservare chi vince
+*/
+
+/* 19. !important
+   - Dare un colore a .important-test
+   - Poi sovrascriverlo con un colore !important in un altro selettore più specifico
+*/

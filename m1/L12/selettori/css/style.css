@@ -1,0 +1,10 @@
+h2 + p{
+    /* Coloro di rosso, il testo di ogni primo paragrafo che si trova dopo un h2  */
+    color: red;
+}
+
+
+.primo ~ p{
+    /* Coloro di verde, il testo di OGNI p successivo al ad un elemento con la classe primo  */
+    color: green;
+}

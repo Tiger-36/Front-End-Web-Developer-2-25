@@ -1,0 +1,31 @@
+h2:first-child{
+    color: red;
+}
+
+
+p:last-child{
+    color: blue;
+}
+
+
+p:first-letter{
+    font-size: 30px;
+}
+
+table{
+    width: 100%;
+}
+
+td{
+    border: 1px solid #000;
+}
+
+tr:nth-of-type(odd) {
+    background-color: grey;
+}
+
+tr:nth-of-type(even) td:first-child::before, 
+tr:nth-of-type(even) td:first-child::after{
+    background-color: red;
+    content: "##";
+}
