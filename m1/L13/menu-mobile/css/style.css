@@ -1,0 +1,25 @@
+#menu{
+    list-style: none;
+    height: 0;
+    overflow: hidden;
+}
+
+#toggle{
+    display: none;
+}
+
+#toggle:focus + #menu{
+    height: 90px;
+}
+
+#menu li{
+    height: 30px;
+}
+#menu li:hover{
+    background-color: aqua;
+}
+#menu a{
+    text-decoration: none;
+    text-transform: uppercase;
+    color: black;
+}
