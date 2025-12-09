@@ -6,4 +6,5 @@
 
 .accordion-section:target{
     height: 200px;
+    background-color: #ccf;
 }

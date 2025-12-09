@@ -1,0 +1,19 @@
+:root{
+    font-size: 16px;
+}
+
+#p1{
+    /* Questa scelta non risente delle eventuali modifiche all'elemento :root  */
+    font-size: 20px;
+}
+
+#p2{
+    font-size: 1rem; /*1 * 16px (dimensione font all'elemento radice)*/
+}
+
+#parent{
+    font-size: 30px;
+}
+#p3{
+    font-size: 1em;
+}
