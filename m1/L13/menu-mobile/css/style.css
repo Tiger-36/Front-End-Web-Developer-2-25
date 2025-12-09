@@ -2,13 +2,15 @@
     list-style: none;
     height: 0;
     overflow: hidden;
+    background-color: bisque;
+    transition: all 0.3s;
 }
 
 #toggle{
-    display: none;
+    opacity: 0;
 }
 
-#toggle:focus + #menu{
+#toggle:checked + #menu{
     height: 90px;
 }
 
