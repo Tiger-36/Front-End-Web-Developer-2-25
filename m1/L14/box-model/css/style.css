@@ -1,0 +1,63 @@
+.quadrato{
+    width: 100px;
+    height: 100px;
+    background-color: red;
+}
+
+#q1{
+    padding: 15px;
+    /*
+    È come scrivere queste quattro regole:
+    padding-top: 15px;
+    padding-right: 15px;
+    padding-bottom: 15px;
+    padding-left: 15px;
+
+    per applicarlo su assi x e y:
+    padding: 10px 20px; y: 10px, x:20px
+
+    
+    padding: 10px 4px 0 20px; t:10px, r:4px, b:0px, l:20px
+
+    */
+
+    box-sizing: border-box;
+    /* box-sizing:border-box; Significa che vogliamo che lo spazio relativo al pudding sia ricavato internamente all'elemento e che l'elemento non subisca variazioni di dimensione */
+}
+
+#q2{
+    border: 1px solid #000;
+}
+
+#q3{
+    border-right: 10px dotted #00ff55;
+}
+
+#q4{
+    border: 5px solid blue;
+    border-bottom: none;
+}
+
+#q5{
+    border-bottom-left-radius: 50%;
+    border-bottom: 10px solid blue;
+    background-color: transparent;
+}
+
+#q6{
+    margin-top: 20px;
+        /*
+   
+    margin-top: 15px;
+    margin-right: 15px;
+    margin-bottom: 15px;
+    margin-left: 15px;
+
+    per applicarlo su assi x e y:
+    margin: 10px 20px; y: 10px, x:20px
+
+    Diverso su tutti i lati
+    margin: 10px 4px 0 20px; t:10px, r:4px, b:0px, l:20px
+
+    */
+}
