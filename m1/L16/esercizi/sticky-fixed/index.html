@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="it">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Sticky Header & Fixed Button</title>
+		<link rel="stylesheet" href="css/style.css" />
+	</head>
+	<body id="top">
+		<header class="site-header">
+			<div class="wrapper">
+				<h1>Guida allo Sticky Header</h1>
+				<p>
+					Rendi questo header <strong>sticky</strong> con il CSS così resterà sempre
+					visibile durante lo scroll.
+				</p>
+			</div>
+		</header>
+
+		<main class="content">
+			<article class="card">
+				<h2>Passo 1 — Comprendere Sticky</h2>
+				<p>
+					La proprietà <code>position: sticky</code> permette a un elemento di comportarsi
+					come static finché non raggiunge un offset, da cui resta fissato nella viewport.
+				</p>
+			</article>
+			<article class="card">
+				<h2>Passo 2 — Sperimenta lo Scroll</h2>
+				<p>
+					Aggiungi abbastanza contenuto o blocchi per creare una pagina lunga. Usa i
+					blocchi seguenti come esempio e completa il layout come preferisci.
+				</p>
+			</article>
+			<article class="card">
+				<h2>Passo 3 — Pulsante Back to Top</h2>
+				<p>
+					Crea un pulsante visibile anche quando la pagina scende in basso usando
+					<code>position: fixed</code>. Il pulsante qui sotto deve tornare rapidamente
+					all'inizio della pagina.
+				</p>
+			</article>
+			<section class="filler">
+				<p>
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer vitae enim
+					vel dui efficitur efficitur. Pellentesque ac elementum mi. Vivamus tincidunt
+					orci vel sem malesuada, a iaculis nibh dictum. Morbi vel hendrerit erat.
+				</p>
+				<p>
+					Nulla facilisi. Donec faucibus, nibh non placerat fermentum, lorem purus
+					pulvinar mi, nec posuere elit mi et libero. Sed convallis ante in ex
+					pellentesque, at mollis augue fermentum.
+				</p>
+				<p>
+					Proin ac hendrerit lacus. Cras tincidunt, ante et convallis faucibus, purus
+					neque ultricies neque, ac hendrerit velit erat quis nunc. Etiam id tristique
+					tellus, in scelerisque mi.
+				</p>
+			</section>
+		</main>
+
+		<a class="back-to-top" href="#top">Back to Top</a>
+	</body>
+</html>

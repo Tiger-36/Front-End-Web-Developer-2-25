@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .card{
+            width: 300px;
+            height: 200px;
+            position: relative;
+        }
+        .content{
+            background-color: aquamarine;
+        }
+        .hover{
+            background-color: rgba(0, 0, 255, 0.438);
+            position: absolute;
+            top: 0;
+            font-size: 13rem;
+            color: #fff;
+            line-height: 200px;
+            text-align: center;
+            display: none;
+            backdrop-filter: blur(1px);/*sfoca gli elementi in background*/
+        }
+        .hover, .content{
+            height: 100%;
+            width: 100%;
+        }
+
+        .card:hover .hover{
+            display: block;
+            cursor: pointer;/*il mouse appare come una manina(tipica dei link)*/
+        }
+    </style>
+</head>
+<body>
+
+    <div class="card">
+        <div class="content">
+            <h1>Titolo</h1>
+            <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cumque quis placeat expedita, vero veritatis corrupti ipsum numquam sunt cupiditate accusantium repellat quia, laborum facere ratione laboriosam rem eaque exercitationem? Magni.
+            </p>
+        </div>
+        <div class="hover">+</div>
+    </div>
+    
+</body>
+</html>

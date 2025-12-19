@@ -1,0 +1,62 @@
+body{
+  margin: 0;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.container{
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.card{
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  border: 1px solid #ccc;
+  transition: 0.3s;
+  border-radius: 5px;
+  height: 300px;
+  margin: 15px 0;
+}
+
+.col{
+  display: inline-block;
+  width: calc(50% - 0.4rem);
+  height: 100%;
+  vertical-align: top;
+}
+
+.exercise-area{
+  padding: 15px;
+  box-sizing: border-box;
+}
+
+.target-area{
+  position: relative;
+  border-left: 1px solid #ccc;
+}
+
+.target, .elemento{
+  text-transform: uppercase;
+  padding: 15px;
+  border-radius: 25px;
+  text-align: center;
+  width: 55px;
+}
+
+.target{
+  color: #000;
+  border: 1px dashed red;
+  background-color: #e079795e;
+  position: absolute;
+  right: 35px;
+  top: 55px;
+}
+
+.elemento{
+  color: #fff;
+  background-color: #0900be;
+}
+
+#ex-2 .target-area{
+  background-image: url(../img/card-2.JPG);
+  background-size: contain;
+}

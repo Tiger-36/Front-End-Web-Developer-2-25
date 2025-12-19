@@ -1,0 +1,18 @@
+body{
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+header{
+    height: 70px;
+    background-color: lightcoral;
+    position: sticky;
+    top: 0;
+}
+
+a{
+    position: fixed;
+    bottom: 15px;
+    right: 15px;
+    background-color: lightgreen;
+    padding: 15px;
+}
