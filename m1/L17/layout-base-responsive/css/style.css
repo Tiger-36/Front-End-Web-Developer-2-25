@@ -1,0 +1,45 @@
+
+.container{
+    width: 1170px;
+    margin: 0 auto;
+}
+
+
+.col{
+    width: calc(100% / 4 + 0.2rem);
+    vertical-align: top;
+    display: inline-block;
+    margin-right: -0.4rem;
+    padding: 15px 5px;
+    box-sizing: border-box;
+    min-height: 300px;
+    background-color: blanchedalmond;
+    border: 1px solid #000;
+}
+
+.content{
+    background-color: #fff;
+    padding: 15px;
+}
+
+@media screen and (max-width: 1280px){
+    .container{
+        width: 768px;
+    }
+    .col{
+        width: calc(100% / 2 + 0.2rem);
+    }
+}
+
+@media screen and (max-width: 768px){
+    .container{
+        width: 100%;
+    }
+}
+
+
+@media screen and (max-width: 480px){
+    .col{
+        width: calc(100% + 0.2rem);
+    }
+}

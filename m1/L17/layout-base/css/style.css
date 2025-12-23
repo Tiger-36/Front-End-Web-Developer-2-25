@@ -1,0 +1,28 @@
+
+.container{
+    width: 1170px;
+    margin: 0 auto;
+}
+
+
+.col{
+    width: calc(100% / 4 + 0.2rem);/*usiamo calc() per definire dinamicamente la larghezza delle colonne del layout a griglia.
+    Spiegazione del calcolo:
+    100% -> tutto lo spazion a disposizione
+    / 4 -> Divido per 4 lo spazio a disposizione
+    + 0.2rem -> rimuovo lo spazio (bug) di display block allargando gli elementi e comprendo tutta l'area a disposizione
+    */
+    vertical-align: top;
+    /* background-color: lightcoral; */
+    display: inline-block;
+    margin-right: -0.4rem;/*gli elementi display: inline-block hanno un fastidioso margine che non risulta nel box model, se vuoi rimuoverlo procedi con un margine negativo come quello che vedi*/
+    padding: 15px 5px;
+    box-sizing: border-box;
+    min-height: 300px;
+    /* border: 1px solid #000; */
+}
+
+.content{
+    background-color: #fff;
+    padding: 15px;
+}

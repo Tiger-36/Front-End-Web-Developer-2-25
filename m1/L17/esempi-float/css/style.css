@@ -1,0 +1,15 @@
+.col{
+    width: 200px;
+    height: 300px;
+    background-color: #ccc;
+    float: left;    
+    /*Float è un sistema antiquato per realizzare layout a griglia che, per quanto sia ancora funzionante, sconsiglio fortemente in quanto complesso e problematico. 
+    Gli elementi float si estraggono dal flusso del documento e si toccano tra di loro. Il testo va ad affiancarsi ad essi e talvolta alcuni contenuti vanno a scorrere sotto gli elementi float */
+    font-size: 3rem;
+    text-align: center;
+}
+
+.clearfix{
+    clear: both;
+    /* Questa proprietà serve a controllare lo scorrimento dei contenuti successivi agli elementi che hanno float.  */
+}
