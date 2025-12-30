@@ -1,0 +1,19 @@
+.blocco{
+    width: 100px;
+    height: 100px;
+    background-color: coral;
+    animation-name: muovi, ruota;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes muovi {
+    from {margin-left: 0;}
+    to {margin-left: 200px;}
+}
+
+@keyframes ruota {
+    from {transform: rotateY(0deg);}
+    to {transform: rotateY(360deg);}
+}
