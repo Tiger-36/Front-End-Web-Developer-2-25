@@ -1,0 +1,59 @@
+h2{
+    font-size: 2rem;
+    text-align: center;
+    border-top: 1px dashed #000;
+    margin: 15px 0;
+}
+
+.flex-area{
+    display: flex;/*Questa regola da sola significa che gli elementi si affiancheranno tra di loro, da sinistra verso destra, schiacciandosi il più possibile per stare sull'asse orizzontale senza andare a capo. Questo comportamento potrà essere modificato con ulteriori proprietà di CSS specifiche per flexbox*/
+    background-color: aquamarine;
+}
+.colonna{
+    height: 100px;
+    width: 200px;
+    border: 1px solid #000;
+    text-align: center;
+    font-size: 2rem;
+    background-color: rgb(194, 175, 4);
+    display: inline-block;
+}
+
+#f1{
+    flex-direction: row-reverse;
+}
+
+#f2{
+    flex-direction: column;
+}
+
+#f3{
+    flex-direction: column-reverse;
+}
+
+#f4{
+    flex-wrap: wrap;
+}
+
+/*flex-2.html*/
+
+#f5{
+    /* justify-content: flex-start;
+    valore di default
+    */
+}
+
+#f6{
+    justify-content: flex-end;
+}
+
+
+#f7{
+    justify-content: center;
+}
+
+
+#f8{
+    justify-content: space-between;
+    gap: 5px;
+}
