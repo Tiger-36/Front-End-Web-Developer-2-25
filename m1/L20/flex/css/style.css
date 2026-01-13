@@ -1,0 +1,59 @@
+h2{
+    font-size: 2rem;
+    text-align: center;
+    border-top: 1px dashed #000;
+    margin: 15px 0;
+}
+
+.flex-area{
+    display: flex;/*Questa regola da sola significa che gli elementi si affiancheranno tra di loro, da sinistra verso destra, schiacciandosi il più possibile per stare sull'asse orizzontale senza andare a capo. Questo comportamento potrà essere modificato con ulteriori proprietà di CSS specifiche per flexbox*/
+    background-color: aquamarine;
+}
+.colonna{
+    height: 100px;
+    border: 1px solid #000;
+    text-align: center;
+    font-size: 2rem;
+    background-color: rgb(194, 175, 4);
+}
+
+#f1 .colonna{
+    flex-grow: 1;
+}
+
+
+#f2 .colonna{
+    flex-grow: 1;
+}
+#f2 .colonna:first-child{
+    flex-grow: 2;
+    /* Il numero assegna una priorità, quindi, se l'elemento è in grado di espandersi si espanderà in misura proporzionale al valore assegnato  */
+}
+#f2 .colonna:last-child{
+    flex-shrink: 1;
+    /* Il numero assegna una priorità, quindi, se l'elemento è in grado di ridursi si ridurrà in misura proporzionale al valore assegnato  */
+}
+
+#f2 .colonna:nth-child(2){
+    flex-basis: 200px;
+}
+
+#f3{
+    flex-wrap: wrap;
+}
+#f3 .colonna{
+    flex: 1 0 400px;
+    /* flex: flex-grow flex-shrink flex-basis */
+}
+
+#f4 .colonna{
+    flex-grow: 1;
+}
+
+#f4 .colonna:first-child{
+    order: 3;
+}
+
+#f4 .colonna:last-child{
+    order: -1;
+}
