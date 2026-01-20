@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap Grid Wireframe</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .box {
+            min-height: 80px;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+        }
+        .hero {
+            min-height: 400px;
+        }
+        .section-title {
+            min-height: 60px;
+        }
+        .feature-box {
+            min-height: 120px;
+        }
+        .team-card {
+            min-height: 300px;
+        }
+        .pricing-card {
+            min-height: 400px;
+        }
+        .min-h-200 {
+            min-height: 200px;
+        }
+        .min-h-250 {
+            min-height: 250px;
+        }
+        .min-h-350 {
+            min-height: 350px;
+        }
+        .min-h-100 {
+            min-height: 100px;
+        }
+    </style>
+</head>
+<body>
+    
+    <!-- HEADER / NAVBAR -->
+    <header class="container-fluid">
+        <div class="row py-3">
+            <div class="col-md-3">
+                <div class="box bg-danger">LOGO</div>
+            </div>
+            <nav class="col-md-9">
+                <div class="box bg-primary">MENU</div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+    <!-- HERO SECTION -->
+    <section class="container-fluid bg-secondary">
+        <div class="row">
+            <div class="col-12">
+                <div class="box hero bg-secondary">HERO SECTION</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT US -->
+    <section class="container my-5">
+        <div class="row">
+            <div class="col-12">
+                <div class="box section-title bg-warning">ABOUT US</div>
+            </div>
+        </div>
+        <div class="row mt-4">
+            <div class="col-md-6">
+                <div class="box feature-box bg-success">BOX 1</div>
+            </div>
+            <div class="col-md-6">
+                <div class="box feature-box bg-danger">BOX 2</div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="box feature-box bg-primary">BOX 3</div>
+            </div>
+            <div class="col-md-6">
+                <div class="box feature-box bg-warning">BOX 4</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- OUR FEATURES -->
+    <section class="container-fluid py-5 bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="box section-title bg-warning">OUR FEATURES</div>
+                </div>
+            </div>
+            <div class="row mt-4">
+                <div class="col-md-6">
+                    <div class="box feature-box bg-info">FEATURE 1</div>
+                </div>
+                <div class="col-md-6">
+                    <div class="box feature-box bg-primary">FEATURE 2</div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="box feature-box bg-danger">FEATURE 3</div>
+                </div>
+                <div class="col-md-6">
+                    <div class="box feature-box bg-warning">FEATURE 4</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TESTIMONIAL -->
+    <section class="container my-5">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="box min-h-200 bg-primary">TESTIMONIAL TEXT</div>
+            </div>
+            <div class="col-md-6">
+                <div class="box min-h-200 bg-danger">PHOTO</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- OUR TEAM -->
+    <section class="container-fluid py-5 bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="box section-title bg-warning">OUR TEAM</div>
+                </div>
+            </div>
+            <div class="row mt-4">
+                <div class="col-md-4">
+                    <div class="box team-card bg-dark">TEAM MEMBER 1</div>
+                </div>
+                <div class="col-md-4">
+                    <div class="box team-card bg-secondary">TEAM MEMBER 2</div>
+                </div>
+                <div class="col-md-4">
+                    <div class="box team-card bg-dark">TEAM MEMBER 3</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section class="container my-5">
+        <div class="row">
+            <div class="col-12">
+                <div class="box section-title bg-warning">SKILLS</div>
+            </div>
+        </div>
+        <div class="row mt-4">
+            <div class="col-md-6">
+                <div class="box min-h-250 bg-secondary-subtle">ICON/GRAPHIC</div>
+            </div>
+            <div class="col-md-6">
+                <div class="box min-h-250 bg-info">PROGRESS BARS</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PRICING PLAN -->
+    <section class="container-fluid py-5 bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="box section-title bg-warning">PRICING PLAN</div>
+                </div>
+            </div>
+            <div class="row mt-4">
+                <div class="col-md-4">
+                    <div class="box pricing-card bg-secondary">PERSONAL</div>
+                </div>
+                <div class="col-md-4">
+                    <div class="box pricing-card bg-danger">STUDENT</div>
+                </div>
+                <div class="col-md-4">
+                    <div class="box pricing-card bg-dark">BUSINESS</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CLIENTS -->
+    <section class="container my-5">
+        <div class="row">
+            <div class="col-12">
+                <div class="box section-title bg-warning">CLIENTS</div>
+            </div>
+        </div>
+        <div class="row mt-4">
+            <div class="col-md-3 col-6">
+                <div class="box bg-light text-dark">LOGO 1</div>
+            </div>
+            <div class="col-md-3 col-6">
+                <div class="box bg-light text-dark">LOGO 2</div>
+            </div>
+            <div class="col-md-3 col-6">
+                <div class="box bg-light text-dark">LOGO 3</div>
+            </div>
+            <div class="col-md-3 col-6">
+                <div class="box bg-light text-dark">LOGO 4</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT FORM -->
+    <section class="container-fluid py-5 bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="box min-h-350 bg-primary">CONTACT FORM</div>
+                </div>
+                <div class="col-md-6">
+                    <div class="box min-h-350 bg-success">CONTACT INFO</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="container-fluid py-4 bg-dark">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="box min-h-100 bg-dark">SOCIAL MEDIA & COPYRIGHT</div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
