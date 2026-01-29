@@ -1,0 +1,107 @@
+@use "sass:color";
+@use "colori" as *;
+@use "functions" as *;
+
+$sizes : 5, 15, 45;
+
+/*Quando each viene utilizzato per Ciclare delle liste, basta basta fornire una sola. Una sola variabile che servirà come vettore per il valore ciclato. */
+@each $s in $sizes{
+    .mt-#{$s}{
+        margin-top: $s + px;
+    }
+}
+
+/*
+Quando invece stiamo ciclando una mappa, molto spesso abbiamo bisogno anche del nome legato al valore che stiamo ciclando. In questo caso possiamo inserire una seconda variabile nella sintassi di each.
+*/
+
+// La mappa che stiamo ciclando(si trova nel partial colori)
+// $colori : (
+//     primary: red,
+//     secondary: green,
+//     accent: yellow
+// );
+@each $nomeColore, $colore in $colori{
+    .bg-#{$nomeColore}{
+        background-color: $colore;
+    }
+    .text-#{$nomeColore}{
+        color: $colore;
+    }
+    
+    .btn-#{$nomeColore}{
+        background-color: $colore;
+        color: contrasto-dinamico($colore);
+        border: none;
+        border-radius: 5px;
+        &:hover{
+            background-color: contrasto-dinamico($colore);
+            color: $colore;
+        }
+    }
+}
+
+//da completare
+$direzioni: (
+    "": all,
+    t: top,
+    b: bottom,
+    s: left,
+    e: right,
+    x: (left, right),
+    y: (top, bottom)
+);
+
+$breakpoints: (
+    "": null,
+    sm: 576px,
+    md: 768px,
+    lg: 992px,
+    xl: 1200px
+);
+
+$dimensioni: (
+    0: 0,
+    1: 0.25rem,
+    2: 0.5rem,
+    3: 1rem,
+    4: 1.5rem,
+    5: 3rem
+);
+
+@each $direzione, $lati in $direzioni{
+    @each $breakpoint, $minWidth in $breakpoints{
+        @each $dimensione, $spazio in $dimensioni{
+
+            $classe: ".m#{$direzione}#{if($breakpoint == "", "", "-#{$breakpoint}")}-#{$dimensione}";
+
+            @if $minWidth == null{
+                #{$classe}{
+                    @if $lati == all{
+                        margin: $spazio;
+                    } @else if type-of($lati) == "list"{
+                        @each $lato in $lati{
+                            margin-#{$lato}: $spazio;
+                        }
+                    } @else{
+                        margin-#{$lati}: $spazio;
+                    }
+                }
+            } @else{
+                @media screen and (min-width: $minWidth){
+                    #{$classe}{
+                        @if $lati == all{
+                            margin: $spazio;
+                        } @else if type-of($lati) == "list"{
+                            @each $lato in $lati{
+                                margin-#{$lato}: $spazio;
+                            }
+                        } @else{
+                            margin-#{$lati}: $spazio;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

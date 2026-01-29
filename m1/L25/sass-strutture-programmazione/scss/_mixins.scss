@@ -1,0 +1,26 @@
+@mixin responsive($breakpoint) {
+
+    @if ($breakpoint == small) {
+        @media screen and (min-width:481px) {
+            @content;
+        }
+    }
+
+    @else if ($breakpoint == medium) {
+        @media screen and (min-width:769px) {
+            @content;
+        }
+    }
+
+    @else if ($breakpoint == large) {
+        @media screen and (min-width:1201px) {
+            @content;
+        }
+    }
+}
+
+@mixin responsive-custom($size) {
+    @media screen and (min-width:$size) {
+        @content;
+    }
+}

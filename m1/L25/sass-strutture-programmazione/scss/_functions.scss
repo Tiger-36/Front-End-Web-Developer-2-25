@@ -1,0 +1,15 @@
+@use "sass:color";//Questo serve per avere le funzioni lightness e adjust. 
+
+@function contrasto-dinamico($colore){
+
+    //traduzione:
+    //Se la luminosità del colore è superiore o uguale a 50 
+    @if(color.lightness($colore) >= 50){
+        //Allora scurisci il colore e restituiscilo 
+        @return color.adjust($colore, $lightness: -20%);
+    }@else{
+        //Altrimenti restituisci il colore dopo averlo schiarito del 20%. 
+        @return color.adjust($colore, $lightness: 20%);
+    }
+
+}

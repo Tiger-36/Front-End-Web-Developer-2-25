@@ -1,0 +1,37 @@
+@use "for";
+@use "each";
+@use "mixins" as *;
+
+
+
+.container{
+    width: 100%;
+    background-color: aquamarine;
+    // @media screen and (min-width:768px){
+    //     background-color: rgb(0, 167, 111);
+    //     width: 768px;
+    //     margin: 0 auto;
+    // }
+
+    // @media screen and (min-width:1280px){
+    //     background-color: rgb(0, 105, 70);
+    //     width: 1280px;
+    // }
+
+    @include responsive(medium){
+        background-color: rgb(0, 167, 111);
+        width: 768px;
+        margin: 0 auto;
+    }
+
+    @include responsive(large){
+        background-color: rgb(0, 105, 70);
+        width: 1280px;
+    }
+
+    @include responsive-custom(1440px){
+        background-color: rgb(0, 67, 45);
+        width: 1400px;
+    }
+
+}
