@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+
+        //Ho commentato le partic he lanciano errore, rimuovi i simboli dei commenti per testare i risultati
+ 
+                {
+                    let a = 0;
+                    //Questa variabile nasce all'interno di questo blocco, quindi non potrà essere utilizzata al di fuori di queste graffe 
+                }
+                // console.log(a);//a is not defined
+
+
+
+                let b = 1;
+
+                {
+                    //In questo caso la variabile B è accessibile perché dichiarata nello scope globale. 
+                    console.log(b);    
+                }
+
+                //Una variabile può essere anche dichiarata nello scope globale e riassegnata in uno scope locale
+                let c = 2;
+                {
+                    c = 3;//Riassegno il valore, adesso c vale 3. 
+                }
+                console.log(c);
+                
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+        let saluto = "Benvenuto";
+        let nome = "Angelo";
+        let frase = saluto + " " + nome;
+
+        console.log(frase);
+        console.log(saluto + " " + nome);
+        
+        //Template string o template literal o interpolazione di string
+        console.log(`${saluto} ${nome}`);
+
+        /*Escape*/
+
+        //Stringa che si rompe perché al suo interno ci sono virgolette doppie javascript, le interpreta come sintassi del linguaggio e interrompe la stringa. 
+        // let html = "<div id="test">Testo</div>";
+
+        let html = '<div id="test">Testo</div>';
+
+        //Questa stringa è delimitata da apostrofi (Apici singoli) Quindi l'apostrofo al suo interno romperà la stringa perché verrà interpretata come simbolo del linguaggio  
+        // let frase2 = 'Frase contenente l'apostrofo';
+
+
+        let htmlEscaped = "<div id=\"test\">Testo</div>";
+        let fraseEscaped = 'Frase contenente l\'apostrofo';
+
+        
+
+
+
+        /*Conversioni*/
+
+        let a  = "2";
+        let b  = 2;
+
+        console.log(a + b);
+        //Siccome stiamo sommando un numero e una stringa, il numero viene convertito in stringa, trattato come tale e quindi concatenato 
+
+        console.log(a * b);
+        //Siccome la moltiplicazione è possibile solo sui numeri, la stringa contenuta dentro la variabile a viene convertita in numero e quindi avviene una moltiplicazione, il valore sarà 4
+        //Questo è possibile solo se le variabili stringa contengono solo numeri 
+
+
+        let c = "4€";
+        let d = 2;
+
+        console.log(c * d);//NaN = Not a Number (non è un numero)
+
+    </script>
+
+</body>
+</html>
