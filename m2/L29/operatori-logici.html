@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+        let a = 10;
+
+        console.log("a =", a);
+        
+        console.log("a > 10 = ", a > 10);//false PERCHè 10 non è maggiore di 10
+        console.log("a < 10 = ", a < 10);//false PERCHè 10 non è minore di 10
+        console.log("a <= 10 = ", a <= 10);//true PERCHè 10 è minore o uguale a 10
+        console.log("a >= 10 = ", a >= 10);//true PERCHè 10 è maggiore o uguale a 10
+
+        console.log("a == 10 = ", a == 10);//true PERCHè 10 è uguale a 10
+        console.log("a != 10 = ", a != 10);//false PERCHè 10 è uguale a 10
+
+        console.log("a == '10' = ", a == "10");//true PERCHè 10 è uguale a "10" (confronto di valore)
+        console.log("a === '10' = ", a === "10");//false PERCHè 10 è un numero e "10" è una stringa (confronto di tipo e valore)
+        
+
+        console.log("a !== '10' =", a !== "10");//true PERCHè 10 è un numero e "10" è una stringa (confronto di tipo e valore)
+        
+
+        let anni = 30;
+
+        console.log("anni =", anni);
+        console.log("anni > 0 && anni < 18 =", anni > 0 && anni < 18 );//false PERCHè 30 non è minore di 18
+        console.log("anni > 0 || anni < 18 =", anni > 0 || anni < 18 );//true PERCHè 30 è maggiore di 0
+
+        console.log( !(anni == 30) );//false PERCHè anni è uguale a 30, quindi !(true) è false
+        
+   
+
+    </script>
+</body>
+</html>

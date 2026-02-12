@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+        let nome = "";//L'utente non ha scritto il suo nome
+
+        if(nome == ""){
+            console.log("Il nome è obbligatorio");
+        }else{
+            console.log("Ciao " + nome);
+        }
+        
+        if(!nome){
+            console.log("Il nome è obbligatorio");
+        }else{
+            console.log("Ciao " + nome);
+        }
+
+        //controllo opposto
+        let cognome = "Rossi";
+
+        if(cognome != ""){
+            console.log("Ciao " + cognome);
+        }else{
+            console.log("Il cognome è obbligatorio");
+        }
+
+        if(cognome){
+            console.log("Ciao " + cognome);
+        }else{
+            console.log("Il cognome è obbligatorio");
+        }
+        
+
+        
+
+    </script>
+
+</body>
+</html>

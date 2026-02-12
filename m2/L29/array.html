@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+
+        let pizze = ["Margherita","Marinara"];
+
+        console.log(pizze);//log di tutte le pizze
+
+        //lettura di un solo elemento
+        console.log( pizze[0] )
+        //nomearray[indice dell'elemento scelto]
+
+        //scrittura
+        //Alla posizione uno del array pizze ci sarebbe la marinara 
+        pizze[1] = "Capricciosa";//Con questo assegnamento elimino il valore marinara sostituendolo con quello nuovo "Capricciosa"
+
+        console.log(pizze);//Osserva la console, vedrai che adesso al posto della marinara c'è la capricciosa 
+
+        //aggiunta
+        //approccio antiquato e sconsigliatissimo
+        //pizze[3] = "Pescatora";//questo è tecnicamente fattibile ma non va bene
+        // console.log(pizze);
+        
+        //aggiunta con metodo push
+        pizze.push("Mimosa","Hawayana")
+        console.log(pizze);
+        
+        let eliminata = pizze.pop()
+        console.log("La pizza " + eliminata + " è stata eliminata");
+
+        console.log( pizze.includes("Mimosa") );
+        
+
+        if( !pizze.includes("Diavola") ){
+            pizze.push("Diavola")
+            console.log(pizze);            
+        }
+
+
+        //verificare la lunghezza di un array
+        let numeroPizze = pizze.length;
+        
+        console.log("Ci sono " + numeroPizze + " nell'array");
+
+        //per vedere se un array non è vuoto
+        console.log( pizze.length > 0 )
+        
+
+    </script>
+    
+</body>
+</html>
