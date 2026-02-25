@@ -87,6 +87,11 @@ console.log(numeri);
 // Usa slice() per creare un nuovo array con solo i primi 3 animali
 // Stampa entrambi gli array (l'originale e quello nuovo)
 
+let animali = ["Cane", "Gatto", "Cavallo", "Leone", "Tigre"];
+let primiTreAnimali = animali.slice(0, 3);
+console.log("Array originale:", animali);
+console.log("Primi tre animali:", primiTreAnimali);
+
 
 // ==================
 // ESERCIZIO 7: ARRAY - JOIN
@@ -162,6 +167,15 @@ if(lettere.indexOf("z") === -1){
 // Stampa l'intero oggetto
 // Stampa solo la proprietà "nome" usando la dot notation
 
+const persona = {
+    nome: "Marco",
+    eta: 25,
+    citta: "Milano"
+};
+
+console.log(persona);
+console.log(persona.nome);
+
 
 // ==================
 // ESERCIZIO 12: OGGETTO CON METODO
@@ -209,6 +223,27 @@ studente.stampaInfo();
 // Stampa l'intero array
 // Stampa solo il titolo del secondo libro
 
+const libri = [
+    {
+        titolo: "Il Signore degli Anelli",
+        autore: "J.R.R. Tolkien",
+        pagine: 1200
+    },
+    {
+        titolo: "1984",
+        autore: "George Orwell",
+        pagine: 328
+    },
+    {
+        titolo: "Il Piccolo Principe",
+        autore: "Antoine de Saint-Exupéry",
+        pagine: 96
+    }
+];
+
+console.log(libri);
+console.log(libri[1].titolo);
+
 
 // ==================
 // ESERCIZIO 15: FUNZIONE CHE RESTITUISCE OGGETTO
@@ -223,8 +258,11 @@ function creaPersona(nome,età){
         nome:nome,
         età:età
     }
-    return età;
+    return persona;
 }
+
+const nuovaPersona = creaPersona("Luigi", 30);
+console.log(nuovaPersona);
 
 function creaPersonaVersioneBreve(nome,età){
     //In questa funzione abbiamo il parametro nome e il parametro età che vanno assegnati ai parametri omonimi di un nuovo oggetto
@@ -256,6 +294,21 @@ function creaPersonaVersioneBreve(nome,età){
 // - metodo "contaStudenti" che restituisce il numero di studenti
 // Aggiungi alcuni studenti e stampa il conteggio
 
+const classe = {
+    studenti: [],
+    aggiungiStudente: function(nome) {
+        this.studenti.push(nome);
+    },
+    contaStudenti: function() {
+        return this.studenti.length;
+    }
+};
+
+classe.aggiungiStudente("Anna");
+classe.aggiungiStudente("Luca");
+classe.aggiungiStudente("Sara");
+console.log("Numero di studenti:", classe.contaStudenti());
+
 
 // ==================
 // ESERCIZIO 17: OGGETTO CON PIÙ METODI
@@ -266,3 +319,23 @@ function creaPersonaVersioneBreve(nome,età){
 // - metodo "preleva" che prende un importo e lo sottrae dal saldo
 // - metodo "mostraSaldo" che stampa il saldo attuale
 // Fai alcune operazioni e mostra il saldo finale
+
+const contoBancario = {
+    saldo: 1000,
+    deposita: function(importo) {
+        this.saldo += importo;
+        console.log(`Depositati €${importo}. Nuovo saldo: €${this.saldo}`);
+    },
+    preleva: function(importo) {
+        this.saldo -= importo;
+        console.log(`Prelevati €${importo}. Nuovo saldo: €${this.saldo}`);
+    },
+    mostraSaldo: function() {
+        console.log(`Saldo attuale: €${this.saldo}`);
+    }
+};
+
+contoBancario.mostraSaldo();
+contoBancario.deposita(500);
+contoBancario.preleva(200);
+contoBancario.mostraSaldo();
