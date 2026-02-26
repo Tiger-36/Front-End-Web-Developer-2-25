@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+        const nome = "Michele";
+
+        console.log(nome.length);//ottengo il numero di caratteri nella stringa
+
+        console.log(nome[0]);//ottengo il primo carattere nella stringa
+        console.log(nome[1]);//ottengo il secondo carattere nella stringa
+
+        //In javascript, la stringa è immutabile, quindi tutti i metodi delle stringhe tendono a restituire una stringa modificata Sotto forma di coppia, senza impattare sulla stringa originale. 
+
+        const frase = "Un saluto a tutti gli Studenti";
+
+        const frase2 = frase.replace("saluto", "buongiorno");
+
+        const frase3 = frase.replace("gli studenti","i discenti");
+
+        const frase4 = frase.replace(/gli studenti/i,"i discenti");
+        //i = ricerca case insensitive
+        //g = ricerca globale(sostituisci tutte le occorrenze, non solo la prima)
+
+        const frase5 = frase.replaceAll("t","#");
+
+        console.table(
+            [
+                frase, 
+                frase2, 
+                frase3,
+                frase4,
+                frase5
+            ]
+        );
+
+    </script>
+</body>
+</html>

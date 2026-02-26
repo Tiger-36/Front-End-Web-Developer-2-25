@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div id="orologio"></div>
+    <div id="timer"></div>
+
+    <script>
+
+        const orologio = document.getElementById("orologio");
+        const timer = document.getElementById("timer");
+
+
+        setInterval(()=> {
+
+            const now = new Date();
+            
+            const ore = now.getHours();
+            const minuti = now.getMinutes()
+            const secondi = now.getSeconds()
+
+            orologio.innerText = ore + ":" + minuti + ":" + secondi
+
+        },1000);
+
+
+        let count = 60;
+        setInterval(()=>{
+
+            if(count === 0){
+                alert("Tempo scaduto");
+                //TODO: fermare timer
+            }
+        
+            timer.innerText = count;
+            
+            count--;
+        },1000)
+
+    </script>
+
+</body>
+</html>

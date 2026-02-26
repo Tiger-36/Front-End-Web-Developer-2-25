@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+
+        const now = new Date();
+
+        console.log(now);
+        const year = now.getFullYear();
+        const month = now.getMonth(); //Mesi partono da zero
+        const indiceGiornoSettimana = now.getDay();//Domanica primo giorno, indice parte da zero, sabato è 6
+        console.log(indiceGiornoSettimana);
+
+        const giorni = ["Lunedì", "Martedì","Mercoledì","Giovedì","Venerdì","Sabato"];
+
+        console.log(giorni[indiceGiornoSettimana]);
+
+        
+        const futuro = new Date();
+
+        //ottengo una data ad un mese da oggi in modo dinamico, funziona per sempre
+        futuro.setMonth( futuro.getMonth() + 1 );
+
+        console.log(futuro);
+
+
+        //date tradotte
+        const oggi = new Date();
+
+        const data = oggi.toLocaleDateString("it-IT",{day:"numeric",month:"long"})
+
+        console.log(data);
+
+    </script>
+</body>
+</html>
