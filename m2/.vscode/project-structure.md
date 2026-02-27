@@ -5,6 +5,7 @@ This file maintains an up-to-date list of project files and structure.
 ## File Structure
 
 - 📁 `.vscode/`
+  - 📄 `.vscode\project-structure.md` (Markdown)
 - 📁 `L27/`
   - 📁 `L27\.vscode/`
     - 📄 `L27\.vscode\project-structure.md` (Markdown)
@@ -14,6 +15,69 @@ This file maintains an up-to-date list of project files and structure.
     - 📄 `L27\collegare-js\index.html` (HTML)
   - 📄 `L27\tipi-dato.html` (HTML)
   - 📄 `L27\variabili.html` (HTML)
+- 📁 `L28/`
+  - 📁 `L28\.vscode/`
+    - 📄 `L28\.vscode\project-structure.md` (Markdown)
+  - 📄 `L28\blockscope.html` (HTML)
+  - 📄 `L28\calcolo-con-variabili.html` (HTML)
+  - 📄 `L28\operatori-assegnamento.html` (HTML)
+  - 📄 `L28\stringhe.html` (HTML)
+  - 📄 `L28\tipi-dato.html` (HTML)
+  - 📄 `L28\verifica-età.html` (HTML)
+- 📁 `L29/`
+  - 📁 `L29\.vscode/`
+    - 📄 `L29\.vscode\project-structure.md` (Markdown)
+  - 📁 `L29\esercizi/`
+    - 📄 `L29\esercizi\index.html` (HTML)
+    - 📄 `L29\esercizi\script.js` (JavaScript)
+  - 📄 `L29\array.html` (HTML)
+  - 📄 `L29\casi-avanzati-if.html` (HTML)
+  - 📄 `L29\operatori-logici.html` (HTML)
+- 📁 `L30/`
+  - 📁 `L30\soluzione-esercizi/`
+    - 📄 `L30\soluzione-esercizi\index.html` (HTML)
+    - 📄 `L30\soluzione-esercizi\script.js` (JavaScript)
+  - 📄 `L30\esempi-oggetti.html` (HTML)
+  - 📄 `L30\function-con-parametri.html` (HTML)
+  - 📄 `L30\function.html` (HTML)
+  - 📄 `L30\operazioni-base-oggetti.html` (HTML)
+- 📁 `L31/`
+  - 📁 `L31\.vscode/`
+    - 📄 `L31\.vscode\project-structure.md` (Markdown)
+  - 📁 `L31\esercizi/`
+    - 📁 `L31\esercizi\.vscode/`
+      - 📄 `L31\esercizi\.vscode\project-structure.md` (Markdown)
+    - 📄 `L31\esercizi\index.html` (HTML)
+    - 📄 `L31\esercizi\script.js` (JavaScript)
+  - 📄 `L31\funzioni-anonime.html` (HTML)
+  - 📄 `L31\funzioni1.html` (HTML)
+  - 📄 `L31\funzioni2.html` (HTML)
+  - 📄 `L31\parametri.html` (HTML)
+  - 📄 `L31\scope-funzioni.html` (HTML)
+  - 📄 `L31\scope-funzioni2.html` (HTML)
+- 📁 `L32/`
+  - 📁 `L32\.vscode/`
+    - 📄 `L32\.vscode\project-structure.md` (Markdown)
+  - 📁 `L32\esercizi-array/`
+    - 📁 `L32\esercizi-array\js/`
+      - 📄 `L32\esercizi-array\js\script.js` (JavaScript)
+    - 📄 `L32\esercizi-array\index.html` (HTML)
+  - 📁 `L32\soluzioni/`
+    - 📁 `L32\soluzioni\.vscode/`
+      - 📄 `L32\soluzioni\.vscode\project-structure.md` (Markdown)
+    - 📄 `L32\soluzioni\index.html` (HTML)
+    - 📄 `L32\soluzioni\script.js` (JavaScript)
+  - 📄 `L32\funzioni-freccia.html` (HTML)
+- 📁 `L33/`
+  - 📁 `L33\.vscode/`
+    - 📄 `L33\.vscode\project-structure.md` (Markdown)
+  - 📁 `L33\esercizi/`
+    - 📄 `L33\esercizi\index.html` (HTML)
+    - 📄 `L33\esercizi\script.js` (JavaScript)
+  - 📄 `L33\Date.html` (HTML)
+  - 📄 `L33\esercizio-date.html` (HTML)
+  - 📄 `L33\Math.html` (HTML)
+  - 📄 `L33\metodi-stringhe.html` (HTML)
 
 ---
-Last updated: 2026-02-09T11:25:04.241Z
+Last updated: 2026-02-27T11:12:01.136Z
