@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+
+        let count = 0;
+        
+        while(count <= 5){
+            console.log("Count vale " + count);
+            count++;
+        }
+
+        console.log("Ciclo finito");
+        
+        console.log("%c================","color:red");
+
+
+        let count2 = 0;
+
+        while(count2 <= 50){
+            
+            count2++;
+            if(count2 === 5){
+                continue;//Passa immediatamente all'interazione successiva 
+            }
+
+            
+            console.log("Count2 vale " + count2);
+            
+            if(count2 === 10){
+                break;//Ferma il ciclo ed esce 
+            }
+        }
+
+        /**
+         * 
+         * break: Utilizzo consentito solo in switch, while e for. 
+         * 
+         * (Tieni presente che comunque switch non è un ciclo )
+         * 
+         * continue: Utilizzo consentito solo in while e for 
+         * 
+         */
+
+    </script>
+</body>
+</html>

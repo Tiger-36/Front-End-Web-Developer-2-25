@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div id="contatore">0</div>
+    
+    <script>
+
+        const contatore = document.getElementById('contatore');
+        let secondi = 1;
+
+        const timer = setInterval(()=>{
+
+            contatore.innerText = secondi;
+            
+            if(secondi === 10){
+                contatore.innerText += " ==> Tempo scaduto!"
+                clearInterval(timer);
+            }
+            
+            secondi++;
+            
+        }, 1000);
+
+
+    </script>
+</body>
+</html>

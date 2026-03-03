@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <select id="select-pizze">
+        <option value="" selected>--Seleziona--</option>
+        <option value="margherita">Margherita</option>
+        <option value="bufalina">Bufalina</option>
+        <option value="diavola">Diavola</option>
+        <option value="hawayana">Hawayana</option>
+    </select>
+
+    <div>
+        Pizza Selezionata: <span id="pizza-selezionata">Nessuna</span>
+    </div>
+    <div>
+        Prezzo: <span id="prezzo-pizza-selezionata">Nessuna</span>
+    </div>
+
+    <script>
+
+        const select = document.getElementById('select-pizze');//la select
+        const spanPizza = document.getElementById('pizza-selezionata');//span riga 21
+        const spanPrezzo = document.getElementById('prezzo-pizza-selezionata');//span riga 24
+
+
+        select.addEventListener('change', function () {
+
+            switch (select.value) {
+                case "margherita":
+                case "bufalina":
+                    spanPizza.innerText = select.value;
+                    spanPrezzo.innerText = "5€";
+                    break;
+                case "diavola":
+                    spanPizza.innerText = select.value;
+                    spanPrezzo.innerText = "1€";
+                    break;
+                case "hawayana":
+                    spanPizza.innerText = select.value;
+                    spanPrezzo.innerText = "5000€";
+                    break;
+                default:
+                    spanPizza.innerText = "Nessuna";
+                    spanPrezzo.innerText = "-----";
+            }
+
+
+        })
+    </script>
+
+
+</body>
+
+</html>
