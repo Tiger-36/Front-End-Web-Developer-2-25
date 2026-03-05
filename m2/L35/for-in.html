@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table{
+            width: 100%;
+        }
+        td{
+            border: 1px solid #000;
+        }
+    </style>
+</head>
+<body>
+    
+    <script>
+
+        const pizza = {
+            gusto: "Margherita",
+            prezzo:5
+        }
+
+        for(let prop in pizza){
+            console.log(pizza[prop]); 
+        }
+
+        /*
+        *document.write() serviva a dimostrare un concetto di utilizzo di for in, non va mai usato in un progetto reale, anche perchè tende a cancellare i contenuti della pagina.
+        */
+
+         for( let nomeProp in  pizza){
+                document.write("<p>" + nomeProp + " : " + pizza[nomeProp] + "</p>")
+            }
+
+
+        document.write('<hr>');
+
+        document.write("<table>");
+
+            document.write("<tr>");
+            for( let nomeProp in  pizza){
+                document.write(`<th>${nomeProp}</th>`)
+            }
+            document.write("</tr>");
+
+            document.write("<tr>");
+            for( let nomeProp in  pizza){
+                document.write(`<td>${pizza[nomeProp]}</td>`)
+            }
+            document.write("</tr>");
+        document.write("</table>");
+    </script>
+
+</body>
+</html>

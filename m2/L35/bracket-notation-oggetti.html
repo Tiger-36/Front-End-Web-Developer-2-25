@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+        const lettere = ["a","b","c"];
+
+        console.log( lettere[1] );//b
+        lettere[2] = "d";
+
+        console.log(lettere);
+
+
+        const pizza = {
+            gusto:"Margherita",
+            prezzo:5
+        }
+
+        console.log(pizza.gusto);//Margherita
+
+        pizza.prezzo = 4.5;
+
+        console.log(pizza);
+        
+
+        /*
+        *La notazione con le parentesi quadre sugli oggetti(bracket notation) è una sintassi alternativa alla sintassi col punto(dot notation)
+        
+        Questa sintassi non va considerata alternativa Universale alla DOT notation. Ti consiglio di considerarla solo per tutte quelle volte in cui devi richiamare una proprietà il cui nome non è accettato dalla sintassi di javascript.
+
+
+        Qui sotto ti mostro un possibile caso reale:
+
+        Stai creando un sistema di autenticazione (login) Il backend ti chiede di inviargli un oggetto fatto esattamente come quello che vedi qua sotto.
+        Quando il backend fa una richiesta di questo tipo, molte volte dovrai semplicemente eseguirla e non avrai modo di fare altrimenti.
+
+        Nel caso della proprietà password-hash Il trattino alto porta con sé un problema poiché non è accettato come sintassi nei nomi della proprietà degli oggetti in javascript. 
+        
+        Questo problema lo puoi risolvere molto semplicemente così:
+        1. Quando e se dovrai dichiarare il nome della proprietà in un oggetto, potrai scriverlo come stringa, quindi tra virgolette 
+        2. Quando e se dovrai leggerlo potrai usare la bracket Notation, cioè le parentesi quadre, come fai con gli array ? Inserendo però tra le parentesi quadre una stringa contenente il nome della proprietà che vuoi richiamare 
+        */
+        const loginData = {
+            email: "info@prova.it",
+            "password-hash": "pa$$word"
+        }
+
+        console.log( loginData );
+
+        console.log( loginData['password-hash'] );
+        
+
+        /**
+         * Mossa criminale che devi evitare di fare.
+         */
+        
+         const diavola = [];
+
+         diavola["gusto"] = "Diavola";
+         diavola["prezzo"] = 1;
+
+         //Javascript di fatto non ti blocca se provi ad inserire all'interno di una array un valore dichiarando una chiave testuale(Come avverrebbe in PHP), Ciò non vuol dire che non sia sbagliato. 
+         //Questo tipo di operazione non va mai fatta, Va di fatto Sempre rispettato lo scopo con cui sono stati creati array e oggetti nel linguaggio. Se c'è questa possibilità è solo dovuta al fatto che sotto al cofano gli array in realtà sono oggetti
+         console.log(diavola);
+         console.log(diavola.gusto);
+
+    </script>
+
+</body>
+</html>
