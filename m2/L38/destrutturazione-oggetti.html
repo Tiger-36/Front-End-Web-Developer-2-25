@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+
+        {
+            const persona = {
+                nome: "Mario",
+                cognome: "Rossi"
+            }
+
+            // Creo le variabili, nome e cognome a partire dall'oggetto persona. 
+            const { nome, cognome } = persona;
+            
+            console.log(nome);//Mario
+            console.log(cognome);//Rossi
+
+            const altraPersona = {
+                nome: "Maria",
+                cognome: "Verdi"
+            }
+            
+            const { nome:altroNome, cognome:altroCognome } = altraPersona;
+            console.log(altroNome);//Maria
+            console.log(altroCognome);//Verdi
+        }
+
+        {
+
+            const persona2 = {
+                nome: "Valter",
+                cognome: "Bianchi",
+                indirizzo: "Via Roma 1"
+            }
+
+            //Da notare: Indirizzo non è citato, quindi non lo sto estraendo. 
+            const { nome, cognome, eta } = persona2
+
+            console.log(nome);//Valter
+            console.log(cognome);//Bianchi
+            console.log(eta);//Non esiste nell'oggetto quindi undefined
+
+        }
+
+        {
+
+            const persona3 = {
+                nome: "Valter",
+                cognome: "Bianchi"
+            }
+
+            //età ha un valore default, quindi se non esiste la proprietà "eta" nell'oggetto destrutturato la variabile viene creata con il valore scelto
+            const { nome, cognome, eta = 0 } = persona3
+
+            console.log(nome);//Valter
+            console.log(cognome);//Bianchi
+            console.log(eta);//Non esiste nell'oggetto quindi 0
+
+        }
+
+    </script>
+</body>
+
+</html>

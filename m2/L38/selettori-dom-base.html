@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div id="primoElemento">Ciao Mondo!</div>
+    
+    <div class="blocco">1° blocco</div>
+    <div class="blocco">2° blocco</div>
+    <div class="blocco">3° blocco</div>
+    
+    <div>Testo del tag senza identificatori</div>
+    
+    <script>
+
+        //Recupera e restituisce l'elemento con l'id definito tra le parentesi
+        //Se lo trova, perché se l'elemento non esiste oppure se è scritto male l'ID restituirà un null 
+        const primoElemento = document.getElementById("primoElemento");
+
+        primoElemento.style.backgroundColor = "red";
+        console.dir(primoElemento);
+        
+        //Recupera tutti gli elementi che hanno una determinata classe 
+        const blocchi = document.getElementsByClassName("blocco")
+        console.log(blocchi);
+
+        //Per poter modificare un elemento della Collection, devo usare la bracket notation tipica degli array solo dopo aver selezionato uno degli elementi, potrò accedere alle sue proprietà tipiche degli elementi DOM 
+        //A quel punto potrò leggerle o sovrascriverle 
+        // blocchi[1].style.backgroundColor = "purple";
+
+        //Quando devi svolgere una determinata operazione di manipolazione su più di un elemento Non procedere mai a scrivere riferimenti diretti a ogni elemento a mano 
+        //Procedi invece sempre con un ciclo 
+        //La logica deve essere, ho un array, quindi faccio un ciclo 
+        for(let blocco of blocchi){
+            blocco.style.backgroundColor = "yellow"
+        }
+
+        //Recupera tutti gli elementi che hanno un determinato tag name 
+        const divs = document.getElementsByTagName('div');
+        console.log(divs);
+        
+
+
+
+    </script>
+</body>
+</html>
