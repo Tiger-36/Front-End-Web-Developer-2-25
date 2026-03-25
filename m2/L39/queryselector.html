@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div>Div n°1</div>
+    <div>Div n°2</div>
+    <div>Div n°3</div>
+    <div>Div n°4</div>
+    <div>Div n°5</div>
+
+    <script>
+
+        const el = document.querySelector('div')//il primo div della pagina
+
+        const elements = document.querySelectorAll('div');//una lista dei div presenti in pagina
+        console.dir(elements)
+
+        const body = document.querySelectorAll('body')//una lista contenente il tag body
+
+        body[0].style.backgroundColor = "red"
+
+    </script>
+</body>
+</html>

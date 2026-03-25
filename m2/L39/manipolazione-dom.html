@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .testo-verde{
+            color: green;
+        }
+
+        .testo-giallo{
+            color: yellow;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="test" class="testo-giallo">Ciao Mondo!</div>
+
+    <input type="text" id="inputTest">
+    
+    <script>
+
+        //className e classList
+        const test = document.getElementById('test');
+        
+        //gestione classi con classname
+        //attenzione usandolo così rimuovo eventuali altre classi in favore di quelle nuove
+        // test.className = "testo-verde";
+        
+        //aggiunta classe con classList
+        test.classList.add('testo-verde')//aggiungo la classe
+        test.classList.remove('testo-giallo')//rimuovo la classe
+        
+        //innerHTML e innerText
+        
+        // test.innerHTML = "<b>Heilà!</b>";//l'html viene interpretato e renderizzato
+        test.textContent = "<b>Heilà!</b>";//l'html non viene interpretato, quindi sarà visibile per l'utente
+        
+        //value
+        const inputTest = document.getElementById('inputTest');
+        inputTest.value = "Michele"
+        const nome = inputTest.value
+        console.log( nome );
+        
+        </script>
+
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <button id="bottone1">clicca</button>
+    <button id="bottone2">Passa il mouse</button>
+
+    <script>
+        //selezione
+        const b1 = document.getElementById("bottone1")
+        const b2 = document.getElementById("bottone2")
+
+        //assegnamento eventi
+        b1.addEventListener("click", function(){
+            alert('saluta');
+        })
+
+        b2.addEventListener("mouseover",function(){
+            alert("saluta")
+        })
+
+    </script>
+</body>
+</html>

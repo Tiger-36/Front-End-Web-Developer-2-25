@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lezione 39 - Esercizi JS</title>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 20px; }
+        h1   { color: #333; }
+
+        /* classi usate negli esercizi */
+        .evidenziato  { background-color: yellow; }
+        .grande       { font-size: 24px; }
+        .rosso        { color: red; }
+        .bordo        { border: 2px solid black; padding: 6px; }
+    </style>
+</head>
+<body>
+
+    <h1>Lezione 39 - DOM: Selezione, Manipolazione ed Eventi</h1>
+
+    <!-- ========== SEZIONE 1 - SELEZIONE ========== -->
+    <section id="sezione-selezione">
+        <h2>Selezione elementi</h2>
+
+        <p id="paragrafo-principale">Questo è il paragrafo principale.</p>
+
+        <p class="nota">Prima nota.</p>
+        <p class="nota">Seconda nota.</p>
+        <p class="nota">Terza nota.</p>
+
+        <ul id="lista-spesa">
+            <li>Pane</li>
+            <li>Latte</li>
+            <li>Uova</li>
+        </ul>
+
+        <input type="text" id="campo-nome" placeholder="Inserisci il tuo nome">
+    </section>
+
+    <!-- ========== SEZIONE 2 - MANIPOLAZIONE ========== -->
+    <section id="sezione-manipolazione">
+        <h2>Manipolazione</h2>
+
+        <p id="testo-dinamico">Testo originale.</p>
+
+        <div id="box-html">
+            <span>Contenuto originale</span>
+        </div>
+
+        <p id="testo-stile">Questo testo cambierà stile.</p>
+
+        <div id="box-classi" class="bordo">Questo box ha classi dinamiche.</div>
+
+        <p id="testo-classnome">Paragrafo con className.</p>
+    </section>
+
+    <!-- ========== SEZIONE 3 - EVENTI ========== -->
+    <section id="sezione-eventi">
+        <h2>Eventi</h2>
+
+        <button id="btn-saluta">Salutami</button>
+
+        <button id="btn-contatore">Cliccami</button>
+        <p id="risultato-contatore">Clic: 0</p>
+
+        <div id="box-hover" style="width:200px; height:80px; background:#ddd; padding:10px; margin-top:10px;">
+            Passa il mouse qui
+        </div>
+        <p id="stato-hover">Stato: fuori</p>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
