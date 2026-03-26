@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        .option{
+            border: 1px solid #777;
+            height: 50px;
+            overflow: hidden;
+        }
+        .option.open{
+            height: auto;
+        }
+        .option h3{
+            margin: 0;
+            background-color: #ccc;
+            height: 50px;
+            box-sizing: border-box;
+            line-height: 50px;
+        }
+        
+        .option h3, .option p{
+            padding: 0 10px;
+        }
+
+
+
+    </style>
+</head>
+<body>
+
+    <div class="accordion">
+        <div class="option open">
+            <h3>Opzione 1</h3>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Expedita, nam debitis qui consequuntur placeat itaque quasi sed corrupti nemo porro, dolorum fugiat fuga reprehenderit? Perferendis optio eius illum consequatur cum.</p>
+        </div>
+        <div class="option">
+            <h3>Opzione 2</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati ipsa ea doloremque minus iure! Eum quas deleniti, minima illo natus eveniet laborum animi sint optio nemo, dolor quidem possimus at!</p>
+        </div>
+        <div class="option">
+            <h3>Opzione 3</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam dolorem et perferendis veniam placeat voluptatibus quam culpa maiores error numquam esse libero molestiae delectus unde minus asperiores, cumque doloribus corporis.</p>
+        </div>
+    </div>
+<hr>
+<hr>
+<hr>
+<hr>
+    <div class="accordion">
+        <div class="option open">
+            <h3>Opzione 1</h3>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Expedita, nam debitis qui consequuntur placeat itaque quasi sed corrupti nemo porro, dolorum fugiat fuga reprehenderit? Perferendis optio eius illum consequatur cum.</p>
+        </div>
+        <div class="option">
+            <h3>Opzione 2</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati ipsa ea doloremque minus iure! Eum quas deleniti, minima illo natus eveniet laborum animi sint optio nemo, dolor quidem possimus at!</p>
+        </div>
+        <div class="option">
+            <h3>Opzione 3</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam dolorem et perferendis veniam placeat voluptatibus quam culpa maiores error numquam esse libero molestiae delectus unde minus asperiores, cumque doloribus corporis.</p>
+        </div>
+
+    </div>
+    
+    <script>
+
+        const accordions = document.querySelectorAll('.accordion');
+
+        accordions.forEach(a => {
+            const options = a.querySelectorAll('.option');
+    
+            options.forEach(o => {
+    
+                o.addEventListener('click', function(){
+    
+                    const openAccordion = a.querySelector('.option.open');
+                    openAccordion.classList.remove('open')
+    
+                    o.classList.add('open')
+    
+                })
+    
+            })
+        })
+
+    </script>
+
+</body>
+</html>

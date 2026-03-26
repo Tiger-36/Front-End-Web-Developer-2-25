@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .blocco{
+            display: inline-block;
+            background-color: #ccc;
+            height: 100px;
+            width: 100px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- data-color È un attributo personalizzato creato da noi per rendere dinamica la funzionalità lato javascript. 
+    Di fatto in HTML puoi creare degli attributi personalizzati, a patto che rispettino un determinato formato che è: data-* 
+    -->
+    <div class="blocco" data-color="red"></div>
+    <div class="blocco" data-color="blue"></div>
+    <div class="blocco" data-color="yellow"></div>
+    <div class="blocco" data-color="green"></div>
+    <div class="blocco" data-color="orange"></div>
+    <div class="blocco" data-color="purple"></div>
+
+    <script>
+
+        const blocchi = document.querySelectorAll('.blocco');
+
+        // element.getAttribute() Permette di ottenere il valore legato ad un attributo di un elemento del DOM 
+        //Si utilizza principalmente per quegli attributi che hanno una sintassi che in javascript non sarebbe consentita, Quindi è essenziale per attributi personalizzati come data-color.  
+        blocchi.forEach(b => {
+            b.addEventListener('click',function(){
+                const color = b.getAttribute('data-color');
+                b.style.backgroundColor = color;
+            })
+        });
+
+    </script>
+    
+</body>
+</html>
