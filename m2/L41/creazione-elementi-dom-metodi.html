@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+</head>
+<body>
+
+    <form id="form">
+
+        <input type="text" class="form-control" id="gusto" placeholder="gusto">
+        <input type="number" class="form-control" id="prezzo" placeholder="prezzo">
+
+        <label for="disponibile">Disponibile?</label>
+        <input type="checkbox" id="disponibile">
+
+        <button class="btn btn-primary">Crea pizza</button>
+
+    </form>
+
+    <div id="listaPizze"></div>
+    
+    <script>
+
+        const pizze = [
+            {
+                gusto: "Margherita",
+                prezzo: 5,
+                disponibile: true    
+            },
+            {
+                gusto: "Diavola",
+                prezzo: 6,
+                disponibile: true    
+            },
+            {
+                gusto: "Quattro Formaggi",
+                prezzo: 7,
+                disponibile: false    
+            }
+        ]
+
+        const form = document.getElementById('form');
+        
+        
+        //al caricamento della pagina vanno mostrate anche le pizze già esistente
+        for(let p of pizze){
+            creaPizza(p.gusto, p.prezzo, p.disponibile)
+        }
+        
+        //questo è quello che succede quando l'utente crea una nuova pizza
+        form.addEventListener('submit', function(e){
+            
+            e.preventDefault();//blocca il reload della pagina dovuto all'invio del form
+            
+            //preleviamo i dati della pizza che l'utente vuole creare
+            const [campoGusto, campoPrezzo, campoDisponibile] = document.querySelectorAll('#form input');
+            
+            creaPizza(campoGusto.value, campoPrezzo.value, campoDisponibile.checked);
+            
+            //resetto i campi del form
+            campoGusto.value = "";
+            campoPrezzo.value = "";
+            campoDisponibile.checked = false;
+            
+        })
+
+        
+        
+        
+        function creaPizza(gusto, prezzo, disponibile){
+            const listaPizze = document.getElementById('listaPizze');//seleziono l'area in cui creare l'html
+
+            const card = document.createElement('div');
+            const cardBody = document.createElement('div');
+            const cardTitle = document.createElement('h5');
+            const cardText = document.createElement('p');
+            const link = document.createElement('a');
+
+            //assegno le classi
+            card.classList.add("card");
+            cardBody.classList.add("card-body");
+            cardTitle.classList.add("card-title");
+            cardText.classList.add("card-text");
+            link.classList.add("btn", "btn-primary");
+
+            //inserisco i contenuti
+            cardTitle.innerText = gusto;
+            cardText.innerText = `Questa pizza costa ${prezzo}€`;
+            link.innerText = disponibile ? "Disponibile" : "Non disponibile";
+
+            //assemblo tra loro gli elementi
+            cardBody.append(cardTitle, cardText, link, deleteBtn)
+            card.append(cardBody)
+            listaPizze.append(card);
+        }
+
+    </script>
+</body>
+</html>
