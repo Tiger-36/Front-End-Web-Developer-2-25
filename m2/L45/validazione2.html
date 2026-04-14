@@ -13,41 +13,41 @@
             <h1>Validazione Form</h1>
         </div>
         <div class="col-12">
-            <form id="myForm">
+            <!-- <form id="myForm"> -->
 
                 <div class="form-group">
-                    <input type="text" class="form-control required" id="nome" placeholder="nome*">
+                    <!-- pattern è un attributo dei campi dei form -->
+                    <input type="text" class="form-control" pattern="[a-zA-Z]{2,15}"  required id="nome" placeholder="nome*">
                     <span class="text-danger"></span>
                 </div>
                 <div class="form-group">
-                    <!-- Non c'è la classe required, quindi questo campo non è obbligatorio -->
+                    <!-- Non c'è attributo required, quindi questo campo non è obbligatorio -->
                     <input type="text" class="form-control" id="cognome" placeholder="cognome">
                     <span class="text-danger"></span>
                 </div>
                 <div class="form-group">
-                    <input type="email" class="form-control required" id="email" placeholder="email*">
+                    <input type="email" class="form-control" required id="email" placeholder="email*">
                     <span class="text-danger"></span>
                 </div>
                 <div class="form-group">
-                    <input type="password" autocomplete="password" class="form-control required" id="password" placeholder="password*">
+                    <input type="password" autocomplete="password" required class="form-control" id="password" placeholder="password*">
                     <span class="text-danger"></span>
                     <button type="button" id="password-toggle" class="btn btn-info">Mostra</button>
                 </div>
 
-                <button class="btn btn-primary">Invia</button>
+                <button id="formBtn" class="btn btn-primary">Invia</button>
 
-            </form>
+            <!-- </form> -->
         </div>
     </div>
     
     <script>
 
-        const form = document.getElementById('myForm');
+        const formBtn = document.querySelector('#formBtn');
         //validazione form
-        form.addEventListener('submit',function(e){
-            e.preventDefault();//previene comportamento di default
+        formBtn.addEventListener('click',function(e){
             
-            const requiredFields = document.querySelectorAll('#myForm .required');
+            const requiredFields = document.querySelectorAll('input[required]');
             const [nome, email, password] = requiredFields;
 
             let valid = true;
@@ -55,37 +55,32 @@
             // Espressione regolare che trova una email all'interno di un testo
             const emailRegex = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/g;
 
-            // Il metodo test è un metodo che permette di eseguire una regex su una stringa
-            if(!emailRegex.test(email.value)){
-                email.nextElementSibling.innerText = "Inserisci una email valida";
-            }else{
-                email.nextElementSibling.innerText = "";
-            }
-
-            // if(nome.value == ""){
-            //     nome.nextElementSibling.innerText = "Compila il campo";
-            //     valid = false;
-            // }
-
-            // if(email.value == ""){
-            //     email.nextElementSibling.innerText = "Compila il campo";
-            //     valid = false;
-            // }
-
-            // if(password.value == ""){
-            //     password.nextElementSibling.innerText = "Compila il campo";
-            //     valid = false;
-            // }
-
-            //versione sintetica e automatizzata
-            requiredFields.forEach(f => {
-                if(!f.value){
-                    f.nextElementSibling.innerText = "Compila il campo";
+            // Il metodo checkValidity() È un metodo che puoi adoperare sui campi di un form per verificare se sono validi o meno. La validità è determinata dalla presenza di attributi per la validazione di html. 
+            requiredFields.forEach(field => {
+                if(!field.checkValidity()){
                     valid = false;
+                    field.nextElementSibling.innerText = field.validationMessage;
                 }else{
-                    f.nextElementSibling.innerText = "";
+                    field.nextElementSibling.innerText = ""
                 }
             })
+
+            console.log(
+                email.checkValidity(),
+                email.validationMessage,
+                email.validity
+            );
+
+            console.log(
+                nome.checkValidity(),
+                nome.validationMessage,
+                nome.validity
+            );
+            
+            if(nome.validity.patternMismatch){
+                //avviso l'utente che non ha rispettato il pattern e gli dico quale pattern è richiesto
+            }
+           
             
             if(valid){
                 //invia i dati al server
