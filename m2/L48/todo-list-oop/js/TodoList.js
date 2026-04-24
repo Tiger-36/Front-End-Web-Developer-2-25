@@ -74,6 +74,7 @@ export default class TodoList {
         const card = document.createElement('div');
         const todoTextArea = document.createElement('p')
         const deleteButton = document.createElement('button');
+        const updateButton = document.createElement('button');
 
         if (!this.input.value && !oldTodo) {
             alert('Il campo non può essere vuoto');
@@ -82,14 +83,25 @@ export default class TodoList {
 
         todoTextArea.innerText = oldTodo?.text || this.input.value;
         deleteButton.innerText = "Elimina"
+        updateButton.innerText = "Completato";
+
+        if(oldTodo)
+        updateButton.innerText = oldTodo.completed ? "Completo" : "Da fare";
 
         deleteButton.classList.add('btn', 'btn-danger');
+        updateButton.classList.add('btn', 'btn-warning');
         card.classList.add('alert', 'alert-info');
         card.id =  oldTodo?.id;
+        
+        deleteButton.addEventListener('click', () => this.deleteTodoElement(card));
+        
+        updateButton.addEventListener('click', () => {
+            card.classList.toggle('alert-info');
+            card.classList.toggle('alert-success');
+            this.setTodoCompleteStatus()
+        });
 
-        deleteButton.addEventListener('click', () => this.deleteTodo(card));
-
-        card.append(todoTextArea, deleteButton);
+        card.append(todoTextArea, updateButton, deleteButton);
         this.htmlList.append(card);
 
         if(!oldTodo) this.saveNewTodo();
@@ -101,8 +113,8 @@ export default class TodoList {
      * @param {HTMLElement} element - Il nodo DOM da rimuovere.
      */
     deleteTodoElement(element) {
-        element.remove()
-
+        element.remove()        
+        this.deleteTodo(element.id)
     }
 
     /**
