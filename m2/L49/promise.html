@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+        const p = new Promise((successo, errore) => {
+
+            setTimeout(()=>{//solo per simulare il tempo di caricamento di un server
+
+                let password = "password";
+                if(password === "password"){
+                    successo("Token autorizzazione sdflgouikhsduiygdfyugfgyh");
+                }
+                
+                errore("Utente non autenticato");
+                
+            }, 1000)
+        })
+
+
+        p
+        .then(res => console.log(res))
+        .catch(err => console.error(err));
+
+
+        //sintassi alternativa
+        p.then(
+            res=> console.log(res), 
+            err => console.error(err)
+        )
+
+    </script>
+
+</body>
+</html>

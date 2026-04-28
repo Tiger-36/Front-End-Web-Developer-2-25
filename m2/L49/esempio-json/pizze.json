@@ -1,0 +1,26 @@
+[
+    {
+        "id":0,
+        "gusto":"Margherita",
+        "prezzo":5,
+        "ingredienti":["pomodoro","mozzarella"],
+        "disponibile":true,
+        "formati":{
+            "mini":true,
+            "mezzo-metro":true,
+            "portafoglio":false
+        }
+    },
+    {
+        "id":1,
+        "gusto":"Diavola",
+        "prezzo":1,
+        "ingredienti":["pomodoro","mozzarella","Salame piccante"],
+        "disponibile":true,
+        "formati":{
+            "mini":false,
+            "mezzo-metro":true,
+            "portafoglio":false
+        }
+    }
+]
